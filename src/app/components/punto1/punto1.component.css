@@ -1,0 +1,127 @@
+/* noticias.component.css */
+
+/* Fondo general */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Fondo negro oscuro */
+  color: #e0e0e0; /* Texto gris claro */
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px; /* Reduce el ancho máximo del contenedor */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título de la página */
+h1 {
+  text-align: center;
+  color: #ff4d4d; /* Rojo vibrante */
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Estilo para las tarjetas de noticias */
+.news-card {
+  background-color: #2a2a2a; /* Fondo gris oscuro */
+  border: 1px solid #ff4d4d; /* Borde rojo */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(255, 77, 77, 0.5); /* Sombra roja */
+}
+
+/* Imagen de la noticia */
+.news-card img {
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: 300px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Recorta la imagen para que se ajuste al cuadro */
+  border-bottom: 1px solid #ff4d4d; /* Línea roja debajo de la imagen */
+  display: block; /* Elimina cualquier espacio extra alrededor de la imagen */
+}
+
+/* Título de la tarjeta */
+.news-card h2 {
+  background-color: #ff4d4d; /* Fondo rojo */
+  color: #fff; /* Texto blanco */
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Texto de la tarjeta */
+.news-card p {
+  padding: 15px;
+  color: #e0e0e0; /* Texto gris claro */
+}
+
+/* Contenido de la tarjeta */
+.news-card .card-header {
+  background-color: #2a2a2a; /* Fondo gris oscuro */
+  color: #ff4d4d; /* Texto rojo */
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.news-card .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.news-card .card-body p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.news-card .card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #1a1a1a; /* Fondo negro oscuro */
+  border-top: 1px solid #ff4d4d; /* Línea roja arriba de los botones */
+}
+
+.news-card .card-footer button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #ff4d4d; /* Borde rojo */
+  border-radius: 5px;
+  background-color: transparent; /* Fondo transparente */
+  color: #ff4d4d; /* Texto rojo */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-card .card-footer button.btn-outline-secondary {
+  background-color: #fff;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.news-card .card-footer button.btn-outline-secondary:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.news-card .card-footer button:hover {
+  background-color: #ff4d4d; /* Fondo rojo al pasar el mouse */
+  color: #fff; /* Texto blanco */
+}

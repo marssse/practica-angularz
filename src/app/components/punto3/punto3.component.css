@@ -1,0 +1,113 @@
+/* Contenedor principal */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a; /* Fondo oscuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0; /* Texto claro */
+  text-align: center; /* Centra todo el contenido */
+}
+
+/* Título */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Centrar la imagen del ahorcado */
+.ahorcado-img {
+  display: block;
+  margin: 0 auto; /* Centra horizontalmente */
+  max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Palabra a adivinar */
+h4 {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.letra {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0 5px;
+  border-bottom: 2px solid #ffffff; /* Línea blanca debajo de las letras */
+  padding: 0 5px;
+}
+
+/* Teclado */
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.keyboard button {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.keyboard button:hover {
+  background-color: #007bff; /* Azul claro */
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.keyboard button:disabled {
+  background-color: #6c757d; /* Gris deshabilitado */
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+/* Intentos restantes */
+h5 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Mensaje de resultado */
+.alert {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #28a745; /* Verde */
+  color: #ffffff;
+}
+
+.alert-danger {
+  background-color: #dc3545; /* Rojo */
+  color: #ffffff;
+}
+
+/* Botón de reinicio */
+button.btn-danger {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ff4d4d; /* Rojo claro */
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333; /* Rojo más oscuro */
+  transform: scale(1.1);
+  cursor: pointer;
+}

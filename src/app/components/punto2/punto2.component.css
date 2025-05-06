@@ -1,0 +1,122 @@
+main {
+  margin-top: 100px; /* Para evitar que el navbar lo tape */
+}
+
+.container {
+  margin-top: 80px;
+}
+
+.card {
+  background-color: #2a2a2a; /* Fondo gris oscuro */
+  border: 1px solid #ff4d4d; /* Borde rojo */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px;
+}
+
+.custom-card {
+  width: 100%; /* Asegura que las tarjetas ocupen el ancho de la columna */
+  max-width: 300px; /* Tamaño máximo para las tarjetas */
+  border: 2px solid #ff4d4d; /* Borde rojo */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  margin: 0; /* Elimina el margen automático */
+}
+
+.row {
+  display: flex; /* Alinea las tarjetas en una fila */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten si no hay espacio */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+.card-header {
+  background-color: #ff4d4d; /* Fondo rojo */
+  color: #fff; /* Texto blanco */
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.card-img-top {
+  height: 150px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+.custom-img {
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: 150px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  border-bottom: 2px solid #ff4d4d; /* Línea roja debajo de la imagen */
+  display: block; /* Elimina cualquier espacio extra alrededor de la imagen */
+}
+
+.card-body {
+  text-align: center;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #ffffff; /* Texto blanco */
+}
+
+.btn-danger {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.btn-danger:hover {
+  background-color: #cc0000;
+}
+
+/* Estilo personalizado para el botón del carrito */
+.btn-primary {
+  background-color: #007bff; /* Color azul predeterminado */
+  border: none; /* Elimina el borde */
+  font-size: 1rem; /* Tamaño de fuente */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.list-group-item {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.carrito {
+  color: #fff; /* Texto blanco */
+}
+
+.carrito .card {
+  background-color: #2a2a2a; /* Fondo gris oscuro */
+  border: 1px solid #ff4d4d; /* Borde rojo */
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.carrito .card-body {
+  color: #fff; /* Texto blanco dentro del cuerpo de la tarjeta */
+}

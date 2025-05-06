@@ -1,0 +1,32 @@
+<main class="container">
+  <h2 class="text-center mb-4 text-danger">Productos Destacados</h2>
+  <div class="row">
+    <div *ngFor="let producto of productos" class="custom-card">
+      <img [src]="producto.img" alt="{{ producto.nombre }}" class="custom-img" />
+      <div class="card-body">
+        <h3 class="card-title">{{ producto.nombre }}</h3>
+        <p class="card-text">{{ producto.descripcion }}</p>
+        <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+        <button (click)="agregarAlCarrito(producto)" class="btn btn-danger">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="carrito mt-4">
+    <h3>Carrito</h3>
+    <div *ngIf="carrito.length > 0" class="card">
+      <div class="card-header">Producto Seleccionado</div>
+      <div class="card-body">
+        <p><strong>Producto:</strong> {{ carrito[0].nombre }}</p>
+        <p><strong>Precio:</strong> ${{ total }}</p>
+        <button (click)="finalizarCompra()" class="btn btn-primary">Finalizar Compra</button>
+      </div>
+    </div>
+    <div *ngIf="carrito.length === 0" class="card">
+      <div class="card-body">
+        <p>El carrito está vacío.</p>
+      </div>
+    </div>
+  </div>
+</main>
+

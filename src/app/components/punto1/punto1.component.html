@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Últimas Noticias</h1>
+  <div class="news-card">
+    <div class="card-header">
+      <h2>{{ noticias[actual].titulo }}</h2>
+    </div>
+    <div class="card-body">
+      <img [src]="noticias[actual].img" alt="Noticia">
+      <p>{{ noticias[actual].noticia }}</p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-outline-secondary" (click)="anterior()">Anterior</button>
+      <button class="btn btn-outline-secondary" (click)="siguiente()">Siguiente</button>
+    </div>
+  </div>
+</div>

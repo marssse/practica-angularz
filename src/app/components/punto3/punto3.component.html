@@ -1,0 +1,38 @@
+<div class="container text-center mt-5">
+  <h2 class="text-danger mb-4">Juego del Ahorcado</h2>
+
+  <!-- Imagen del ahorcado -->
+  <img [src]="obtenerImagen()" class="img-fluid ahorcado-img mb-4" alt="Estado del Ahorcado">
+
+  <!-- Palabra a adivinar -->
+  <h4 class="mb-3">
+    <span *ngFor="let letra of palabraSeleccionada?.split('')">
+      <span class="letra">
+        {{ mostrarLetra(letra) || juegoTerminado ? letra : '_' }}
+      </span>
+    </span>
+  </h4>
+
+  <!-- Teclado -->
+  <div class="keyboard mb-4">
+    <button 
+      class="btn btn-outline-light m-1" 
+      *ngFor="let letra of abecedario"
+      (click)="letraPresionada(letra)" 
+      [disabled]="letrasAdivinadas.includes(letra) || juegoTerminado"
+      [attr.aria-label]="'Letra ' + letra">
+      {{ letra }}
+    </button>
+  </div>
+
+  <!-- Intentos restantes -->
+  <h5>Intentos restantes: {{ intentos }}</h5>
+
+  <!-- Mensaje de resultado -->
+  <div *ngIf="juegoTerminado" class="alert" [ngClass]="{'alert-success': gano, 'alert-danger': !gano}" role="alert">
+    {{ gano ? '¡Ganaste!' : 'Perdiste, la palabra era: ' + palabraSeleccionada }}
+  </div>
+
+  <!-- Botón para reiniciar -->
+  <button class="btn btn-danger mt-3" (click)="nuevaPartida()">Jugar de nuevo</button>
+</div>
